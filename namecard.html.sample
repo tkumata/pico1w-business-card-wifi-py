@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>名刺</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      }
+      .card {
+        width: 500px;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+        border: 1px solid #e0e0e0;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .logo {
+        width: 60px;
+        height: 60px;
+        background: #007bff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-right: 15px;
+      }
+      .info {
+        flex: 1;
+      }
+      .name {
+        font-size: 1.6em;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+      }
+      .title {
+        font-size: 1.1em;
+        color: #777;
+        margin: 5px 0 0;
+      }
+      .contact {
+        font-size: 0.95em;
+        color: #555;
+        line-height: 1.6;
+        margin-top: 20px;
+        text-align: right;
+      }
+      .contact div {
+        display: inline-block;
+        text-align: left;
+      }
+      .contact a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .contact a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="header">
+        <div class="logo">YN</div>
+        <div class="info">
+          <p class="name">Your Name</p>
+          <p class="title">Your Title</p>
+        </div>
+      </div>
+      <div class="contact">
+        <div>
+          📧 example@example.com<br />
+          📱 090-1234-5678<br />
+          🌐 https://github.com/
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

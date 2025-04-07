@@ -1,0 +1,7 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Doe;John;;;
+FN:John Doe
+EMAIL:john.doe@example.com
+TEL:+81-123-456-7890
+END:VCARD
