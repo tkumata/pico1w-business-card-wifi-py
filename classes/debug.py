@@ -10,4 +10,4 @@ class Debug:
     # Debug Print Function
     def dprint(self, *args):
         if self.debug:
-            print(*args)
+            print(f"{self.name}: ", *args)

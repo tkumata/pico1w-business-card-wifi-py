@@ -18,7 +18,7 @@ class Servers:
             data, addr = dns.recvfrom(512)
             if not data:
                 return
-            debug.dprint("DNS request from", addr)
+            debug.dprint("Request from", addr)
 
             transaction_id = data[0:2]
             flags = b'\x81\x80'
@@ -42,7 +42,7 @@ class Servers:
             debug = Debug("HTTP")
 
             client, addr = http.accept()
-            debug.dprint("HTTP request from", addr)
+            debug.dprint("Request from", addr)
             client.recv(1024).decode()
             response = 'HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n' + \
                 self.load_html('../presentations/businesscard.html')
