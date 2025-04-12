@@ -39,7 +39,7 @@ A captive portal is a feature often seen in public Wi-Fi APs, such as those in a
    PASSWORD = "YourPassword"
    ```
 
-3. **Edit the Business Card HTML**: Copy `businesscard.html.sample` to `businesscard.html` and customize the business card information.
+3. **Edit the Business Card HTML**: Copy `presentations/businesscard.html.sample` to `presentations/businesscard.html` and customize the business card information.
 4. **Upload the Code**: Upload the code to the Pico W. Right-click on the file list pane and select "Upload project to Pico."
 5. **Verify Operation**: Connect a device to the Pico W's Wi-Fi, and the browser will automatically launch and display the business card.
 
@@ -48,10 +48,9 @@ A captive portal is a feature often seen in public Wi-Fi APs, such as those in a
 - `main.py`: Main script that controls Wi-Fi AP mode and server operation.
 - `ssd1351.py`: SSD1351 OLED display driver. Depends on `misakifont`.
 - `misakifont`: Font data for the SSD1351 OLED display.
-- `captiveportal.html`: Captive Portal view and redirect `businesscard.html`.
 - `secrets.py.sample`: Sample file for Wi-Fi AP configuration.
-- `businesscard.html.sample`: Business card HTML template.
-- `businesscard.vcf.sample`: Sample file for delivering vCard instead of `businesscard.vcf`.
+- `presentations/businesscard.html.sample`: Business card HTML template.
+- `presentations/businesscard.vcf.sample`: Sample file for delivering vCard instead of `businesscard.vcf`.
 
 ## Usage
 
