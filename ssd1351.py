@@ -1,9 +1,11 @@
 # SSD1351 OLED Display Driver for MicroPython
 # Based on various open-source implementations
 
-from micropython import const
 import time
+
 from machine import Pin
+from micropython import const
+
 from misakifont import MisakiFont
 
 # Constants for SSD1351 commands
