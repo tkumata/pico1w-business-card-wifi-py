@@ -2,10 +2,6 @@ from classes.debug import Debug
 
 
 class Servers:
-    # def __init__(self):
-    # self.dns = dns
-    # self.http = http
-
     # Load HTML File
     def load_html(self, filename):
         try:
@@ -48,10 +44,8 @@ class Servers:
             client, addr = http.accept()
             debug.dprint("HTTP request from", addr)
             client.recv(1024).decode()
-            base_dir = os.path.dirname(__file__)
-            business_card_path = os.path.join(base_dir, '../presentations/businesscard.html')
             response = 'HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n' + \
-                self.load_html(business_card_path)
+                self.load_html('../presentations/businesscard.html')
 
             client.send(response.encode())
             client.close()
