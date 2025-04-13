@@ -1,7 +1,7 @@
-from classes.debug import Debug
+from log.debug import DebugHandler
 
 
-class Servers:
+class DnsHandler:
     # Load HTML File
     def load_html(self, filename):
         try:
@@ -11,9 +11,9 @@ class Servers:
             return f"<h1>Error loading file: {e}</h1>"
 
     # DNS Server
-    def dns_server(self, dns, ip):
+    def handle_request(self, dns, ip):
         try:
-            debug = Debug("DNS")
+            debug = DebugHandler("DNS")
 
             data, addr = dns.recvfrom(512)
             if not data:
@@ -33,21 +33,5 @@ class Servers:
             dns_response = dns_header + query + answer
 
             dns.sendto(dns_response, addr)
-        except OSError:
-            pass
-
-    # HTTP Server
-    def http_server(self, http):
-        try:
-            debug = Debug("HTTP")
-
-            client, addr = http.accept()
-            debug.dprint("Request from", addr)
-            client.recv(1024).decode()
-            response = 'HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n' + \
-                self.load_html('../presentations/businesscard.html')
-
-            client.send(response.encode())
-            client.close()
         except OSError:
             pass

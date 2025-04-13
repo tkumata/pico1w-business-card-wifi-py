@@ -6,7 +6,7 @@ import time
 from machine import Pin
 from micropython import const
 
-from misakifont import MisakiFont
+from assets.misakifont import MisakiFont
 
 # Constants for SSD1351 commands
 SSD1351_CMD_SETCOLUMN = const(0x15)

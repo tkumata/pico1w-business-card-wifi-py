@@ -5,7 +5,8 @@ import time
 import network
 from machine import SPI, Pin
 
-from classes.servers import Servers
+from domain.dns import DnsHandler
+from domain.http import HttpHandler
 from ssd1351 import SSD1351
 
 # Define Color
@@ -30,18 +31,19 @@ rst = Pin(17, Pin.OUT)
 display = SSD1351(128, 128, spi, dc, cs, rst)
 
 # Init objects
-servers = Servers()
+dns_handler = DnsHandler()
+http_handler = HttpHandler()
 
 # DNS Socket (UDP)
-dns = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-dns.bind(('0.0.0.0', 53))
-dns.setblocking(False)
+dns_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+dns_socket.bind(('0.0.0.0', 53))
+dns_socket.setblocking(False)
 
 # HTTP Socket (TCP)
-http = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-http.bind(('0.0.0.0', 80))
-http.listen(3)
-http.setblocking(False)
+http_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+http_socket.bind(('0.0.0.0', 80))
+http_socket.listen(5)
+http_socket.setblocking(False)
 
 # Init Wi-Fi as AP mode
 ap = network.WLAN(network.AP_IF)
@@ -63,6 +65,6 @@ display.show()
 
 # Main Loop
 while True:
-    servers.dns_server(dns, ip)
-    servers.http_server(http)
+    dns_handler.handle_request(dns_socket, ip)
+    http_handler.handle_request(http_socket)
     time.sleep(0.001)
