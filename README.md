@@ -26,10 +26,10 @@ A captive portal is a feature often seen in public Wi-Fi APs, such as those in a
 1. **Clone the Code**:
 
    ```bash
-   git clone https://github.com/tkumata/pico1w-namecard-wifiap-py.git
+   git clone https://github.com/tkumata/pico1w-business-card-wifi-py.git
    git clone https://github.com/Tamakichi/pico_MicroPython_misakifont.git
-   cp -pr pico_MicroPython_misakifont/misakifont pico1w-namecard-wifiap-py/
-   cd pico1w-namecard-wifiap-py
+   cp -pr pico_MicroPython_misakifont/misakifont pico1w-business-card-wifi-py/
+   cd pico1w-business-card-wifi-py
    ```
 
 2. **Configure Wi-Fi Information**: Copy `secrets.py.sample` to `secrets.py` and set the SSID and password.
@@ -39,7 +39,7 @@ A captive portal is a feature often seen in public Wi-Fi APs, such as those in a
    PASSWORD = "YourPassword"
    ```
 
-3. **Edit the Business Card HTML**: Copy `presentations/businesscard.html.sample` to `presentations/businesscard.html` and customize the business card information.
+3. **Edit the Business Card HTML**: Copy `presentations/view/businesscard.html.sample` to `presentations/view/businesscard.html` and customize the business card information.
 4. **Upload the Code**: Upload the code to the Pico W. Right-click on the file list pane and select "Upload project to Pico."
 5. **Verify Operation**: Connect a device to the Pico W's Wi-Fi, and the browser will automatically launch and display the business card.
 
@@ -49,8 +49,8 @@ A captive portal is a feature often seen in public Wi-Fi APs, such as those in a
 - `ssd1351.py`: SSD1351 OLED display driver. Depends on `misakifont`.
 - `misakifont`: Font data for the SSD1351 OLED display.
 - `secrets.py.sample`: Sample file for Wi-Fi AP configuration.
-- `presentations/businesscard.html.sample`: Business card HTML template.
-- `presentations/businesscard.vcf.sample`: Sample file for delivering vCard instead of `businesscard.vcf`.
+- `presentations/view/businesscard.html.sample`: Business card HTML template.
+- `presentations/view/businesscard.vcf.sample`: Sample file for delivering vCard instead of `businesscard.vcf`. Not use still.
 
 ## Usage
 
