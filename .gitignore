@@ -1,5 +1,5 @@
 .micropico
 secrets.py
-misakifont
-namecard.html
-namecard.vcf
+assets/misakifont
+presentation/businesscard.html
+presentation/businesscard.vcf

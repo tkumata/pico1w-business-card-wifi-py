@@ -8,14 +8,14 @@ A captive portal is a feature often seen in public Wi-Fi APs, such as those in a
 
 - **Wi-Fi Access Point Mode**: The Pico W operates as a Wi-Fi AP.
 - **Captive Portal**: Automatically delivers data to connected devices. In this case, it displays a business card in HTML format.
-- **Customizable Business Card Information**: You can easily modify the business card content by editing the `namecard.html` file.
+- **Customizable Business Card Information**: You can easily modify the business card content by editing the `businesscard.html` file.
 - **OLED Display Support**: Displays the SSID and password on an SSD1351 OLED display, allowing sharing only with people nearby.
 
 ## Requirements
 
 - Raspberry Pi Pico W
 - SSD1351 OLED
-- MicroPython Firmware 1.29.0
+- MicroPython Firmware 1.24.1
 
 ## Optional
 
@@ -39,7 +39,7 @@ A captive portal is a feature often seen in public Wi-Fi APs, such as those in a
    PASSWORD = "YourPassword"
    ```
 
-3. **Edit the Business Card HTML**: Copy `namecard.html.sample` to `namecard.html` and customize the business card information.
+3. **Edit the Business Card HTML**: Copy `presentations/businesscard.html.sample` to `presentations/businesscard.html` and customize the business card information.
 4. **Upload the Code**: Upload the code to the Pico W. Right-click on the file list pane and select "Upload project to Pico."
 5. **Verify Operation**: Connect a device to the Pico W's Wi-Fi, and the browser will automatically launch and display the business card.
 
@@ -47,10 +47,10 @@ A captive portal is a feature often seen in public Wi-Fi APs, such as those in a
 
 - `main.py`: Main script that controls Wi-Fi AP mode and server operation.
 - `ssd1351.py`: SSD1351 OLED display driver. Depends on `misakifont`.
-- `namecard.html.sample`: Business card HTML template.
-- `secrets.py.sample`: Sample file for Wi-Fi AP configuration.
 - `misakifont`: Font data for the SSD1351 OLED display.
-- `namecard.vcf.sample`: Sample file for delivering vCard instead of `namecard.html`.
+- `secrets.py.sample`: Sample file for Wi-Fi AP configuration.
+- `presentations/businesscard.html.sample`: Business card HTML template.
+- `presentations/businesscard.vcf.sample`: Sample file for delivering vCard instead of `businesscard.vcf`.
 
 ## Usage
 
