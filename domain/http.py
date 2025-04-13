@@ -19,7 +19,7 @@ class HttpHandler:
             debug.dprint("Request from", addr)
             client.recv(1024).decode()
             response = 'HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n' + \
-                self.load_html('../presentation/businesscard.html')
+                self.load_html('../presentation/view/businesscard.html')
 
             client.send(response.encode())
             client.close()
