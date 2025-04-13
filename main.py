@@ -7,7 +7,7 @@ from machine import SPI, Pin
 
 from domain.dns import DnsHandler
 from domain.http import HttpHandler
-from ssd1351 import SSD1351
+from presentation.oled.ssd1351 import SSD1351
 
 # Define Color
 COLORS = {
