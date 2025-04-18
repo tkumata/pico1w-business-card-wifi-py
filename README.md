@@ -28,7 +28,7 @@ A captive portal is a feature often seen in public Wi-Fi APs, such as those in a
    ```bash
    git clone https://github.com/tkumata/pico1w-business-card-wifi-py.git
    git clone https://github.com/Tamakichi/pico_MicroPython_misakifont.git
-   cp -pr pico_MicroPython_misakifont/misakifont pico1w-business-card-wifi-py/
+   cp -pr pico_MicroPython_misakifont/misakifont pico1w-business-card-wifi-py/assets/
    cd pico1w-business-card-wifi-py
    ```
 
